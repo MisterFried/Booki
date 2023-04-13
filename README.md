@@ -1,1 +1,3 @@
-# booki-starter-pack
+# P2 Transformer une maquette en site web
+
+Intégration de la maquette du site web Booki via HTML / CSS uniquement
