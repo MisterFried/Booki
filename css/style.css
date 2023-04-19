@@ -27,27 +27,21 @@ a
 
 
 /*************** Font ***************/
-h1
+h1, h2
 {
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 700;
-    width: 100%;
-}
-
-h2, h3, span
-{
-    font-size: 16px;
 }
 
 .euro
 {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 700;
 }
 
 
 /*************** Icon Color ***************/
-.fa-solid
+i
 {
     color: var(--main-color);
 }
@@ -64,9 +58,8 @@ h2, h3, span
 
 
 /*************** Global layout ***************/
-.main-container
+.body
 {
-    width: 100%;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -82,13 +75,13 @@ header
 {
     display: flex;
     justify-content: space-between;
-    height: 79px;
     margin-bottom: 30px;
 }
 
 .logo
 {
-    padding: 30px;
+    height: 19px;
+    margin: 30px;
 }
 
 nav
@@ -98,27 +91,22 @@ nav
     padding: 0 25px;
 }
 
-nav .nav-link
+.nav-link
 {
     position: relative;
-    height: 35px;
     margin-top: 16px;
     text-align: center;
-    cursor: pointer;
+    transition: color 0.2s ease-in-out;
 }
 
 
 /*************** Header Hover Effects ***************/
-nav .nav-link a
-{
-    transition: color 0.2s ease-in-out;
-}
-nav .nav-link:hover a
+.nav-link:hover
 {
     color: var(--main-color);
 }
 
-nav .nav-link::before
+.nav-link::before
 {
     position: absolute;
     top: -16px;
@@ -130,11 +118,19 @@ nav .nav-link::before
     transition: width 0.3s ease-in-out;
 }
 
-nav .nav-link:hover::before
+.nav-link:hover::before
 {
     width: 100%;
 }
 
+
+/*************** Main content ***************/
+main
+{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
 
 /*************** Info Group ***************/
 .info-group
@@ -142,7 +138,6 @@ nav .nav-link:hover::before
     display: flex;
     flex-direction: column;
     gap: 35px;
-    margin-bottom: 35px;
 }
 
 .headline
@@ -161,20 +156,18 @@ nav .nav-link:hover::before
 
 .search-bar > *
 {
-    height: 49px;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
 }
 
-.search-bar .location-icon
+.location-icon
 {
-    width: 50px;
     padding: 15px 18px 16px;
     border-radius: 15px 0 0 15px;
     background-color: var(--block-bg-color);
 }
 
-.search-bar .text-input
+.text-input
 {
     text-align: center;
     border: solid var(--block-bg-color);
@@ -191,7 +184,7 @@ nav .nav-link:hover::before
     cursor: pointer;
 }
 
-.search-bar .search-icon
+.search-icon
 {
     display: none;
 }
@@ -211,9 +204,9 @@ nav .nav-link:hover::before
     font-weight: 700;
 }
 
-.filter-bar .filter-title
+.filter-title
 {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .filter-button
@@ -221,8 +214,7 @@ nav .nav-link:hover::before
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50px;
-    padding: 4px 19px;
+    padding: 12px 19px;
     border: 2px solid var(--block-bg-color);
     border-radius: 25px;
     background-color: white;
@@ -231,12 +223,12 @@ nav .nav-link:hover::before
 
 .filter-button .filter-text
 {
-    font-size: 17px;
+    font-size: 1.0625rem;
 }
 
 .filter-button i
 {
-    font-size: 22px;
+    font-size: 1.375rem;
     padding-right: 10px;
 }
 
@@ -258,7 +250,7 @@ nav .nav-link:hover::before
 
 .info-bar i
 {
-    font-size: 10px;
+    font-size: 0.625rem;
     padding: 7px 10px;
     border: 1px solid var(--block-bg-color);
     border-radius: 24px;
@@ -270,7 +262,6 @@ nav .nav-link:hover::before
 {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 35px;
 }
 
 .hebergements, .populaires
@@ -340,7 +331,6 @@ nav .nav-link:hover::before
 .hebergements-cards-container .card img
 {
     height: 125px;
-    width: 100%;
     border-radius: 20px 20px 0 0;
 }
 
@@ -362,7 +352,7 @@ nav .nav-link:hover::before
 .afficher-plus
 {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 
@@ -382,7 +372,7 @@ nav .nav-link:hover::before
 
 .populaires-title .popular-icon
 {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .populaires-cards-container
@@ -417,10 +407,9 @@ nav .nav-link:hover::before
 .activites
 {
     padding: 30px;
-    margin-bottom: 35px;
 }
 
-.activites h1
+.activites-titre
 {
     margin-bottom: 30px;
 }
@@ -435,8 +424,7 @@ nav .nav-link:hover::before
 
 .activites-cards-container a
 {
-    width: min(250px,50%);
-    flex: 1 1 auto;
+    flex: 1 1 250px;
     align-self:  center;
     border-radius: 20px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
@@ -486,13 +474,13 @@ footer
 
 .footer-title
 {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
 }
 
 footer .footer-element
 {
-    font-size: 16px;
+    font-size: 1rem;
     margin-top: 15px;
     list-style-type: none
 }
@@ -572,19 +560,19 @@ footer .footer-element
         gap: 0;
     }
 
-    nav .nav-link
+    .nav-link
     {
         margin: 0;
         width: 50%;
     }
 
-    nav .nav-link::before
+    .nav-link::before
     {
         top: 31px;
         z-index: 1;
     }
 
-    nav .nav-link::after
+    .nav-link::after
     {
         position: absolute;
         top: 31px;
@@ -614,28 +602,28 @@ footer .footer-element
         transform: translateX(-15px);
     }
 
-    .search-bar .search-icon
+    .search-icon
     {
-        font-size: 17px;
+        font-size: 1.0625rem;
         display: inline;
     }
 
-    .search-bar .search-text
+    .search-text
     {
         display: none;
     }
 
-    .filter-bar .filter-button
+    .filter-button
     {
         flex: 1 1 auto;
     }
 
-    .filter-bar > span
+    .filter-title
     {
         width: 100%;
     }
 
-    .filter-bar .filter-text
+    .filter-text
     {
         font-size: 14px;
     }
@@ -698,13 +686,12 @@ footer .footer-element
     footer
     {
         flex-direction: column;
-        justify-content: center;
         gap: 50px;
         padding: 30px;
     }
 
     .footer-column
     {
-        width: auto;
+        width: 100%;
     }
 }
